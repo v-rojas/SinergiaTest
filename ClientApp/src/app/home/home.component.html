@@ -1,0 +1,74 @@
+<h1>Productos</h1>
+<form [formGroup]="productoForm">
+    <div class="row">
+      <div class="col-6">
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="nombre">
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Descripción</mat-label>
+            <input matInput placeholder="Descripción" formControlName="descripcion">
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>          
+          <mat-form-field appearance="legacy">
+            <mat-label>Categorias</mat-label>
+            <mat-select formControlName="categoria">
+              <mat-option *ngFor="let item of categorias" [value]="item.id">{{item.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Proveedores</mat-label>
+            <mat-select formControlName="proveedor">
+              <mat-option *ngFor="let item of proveedores" [value]="item.id">{{item.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+      </div>
+      <div class="col-6">
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Marcas</mat-label>
+            <mat-select  formControlName="marca">
+              <mat-option *ngFor="let item of marcas" [value]="item.id">{{item.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Medidas</mat-label>
+            <input matInput placeholder="Medidas" formControlName="medidas">
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" placeholder="Cantidad" formControlName="cantidad">
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="legacy">
+            <mat-label>Precio Unitario</mat-label>
+            <input matInput placeholder="Precio Unitario" formControlName="precio_unitario">
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+      </div>
+    </div>
+</form>
+<br />
+<button mat-flat-button color="primary" (click)="crearProductos()">Crear</button>
+
+
+
+

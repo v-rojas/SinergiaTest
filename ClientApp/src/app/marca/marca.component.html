@@ -1,0 +1,19 @@
+<h1>Marca</h1>
+<form [formGroup]="marcaForm">
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="nombre">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Descripción</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="descripcion">
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+</form>
+
+<button mat-flat-button color="primary" (click)="crearMarca()">Crear</button>
